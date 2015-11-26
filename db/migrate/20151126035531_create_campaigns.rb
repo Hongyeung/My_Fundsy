@@ -5,7 +5,7 @@ class CreateCampaigns < ActiveRecord::Migration
       t.money :goal
       t.text :description
       t.datetime :end_date
-      t.string :user_references
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
